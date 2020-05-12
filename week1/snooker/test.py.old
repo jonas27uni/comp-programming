@@ -1,0 +1,46 @@
+import numpy as np
+
+RED = 1
+YELLOW = 2
+GREEN = 3
+BROWN = 4
+BLUE = 5
+PINK = 6
+BLACK = 7
+
+cR = 0
+cY = 0
+cG = 0
+cBRO = 0
+cBLU = 0
+cP = 0
+cBLA = 0
+
+def color(i):
+    global cR
+    global cY
+    global cG
+    global cBRO
+    global cBLU
+    global cP
+    global cBLA
+    if i == "red":
+        cR+=1
+    elif i=="yellow":
+        cY+=1
+    elif i=="green":
+        cG+=1
+    elif i=="brown":
+        cBRO+=1
+    elif i=="blue":
+        cBLU+=1
+    elif i=="pink":
+        cP+=1
+    else:
+        cBLA+=1
+
+balls = int(input())
+s = np.zeros(balls, dtype=np.int)
+for i in range(balls):
+    s[i] = color(input())
+print(s)
