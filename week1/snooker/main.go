@@ -50,7 +50,7 @@ func exec(rw *bufio.ReadWriter) {
 func readLine(rw *bufio.ReadWriter) string {
 	index, err := rw.ReadString('\n')
 	if err != nil {
-		log.Println(err)
+		log.Panicln(err)
 	}
 	return strings.Replace(index, "\n", "", -1)
 }
